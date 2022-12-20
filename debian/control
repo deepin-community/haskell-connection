@@ -1,0 +1,97 @@
+Source: haskell-connection
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Clint Adams <clint@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-basement-dev,
+ libghc-basement-prof,
+ libghc-data-default-class-dev,
+ libghc-data-default-class-prof,
+ libghc-network-dev (>= 2.6.3),
+ libghc-network-prof,
+ libghc-socks-dev (>= 0.6),
+ libghc-socks-prof,
+ libghc-tls-dev (>= 1.4),
+ libghc-tls-prof,
+ libghc-x509-dev (>= 1.5),
+ libghc-x509-prof,
+ libghc-x509-store-dev (>= 1.5),
+ libghc-x509-store-prof,
+ libghc-x509-system-dev (>= 1.5),
+ libghc-x509-system-prof,
+ libghc-x509-validation-dev (>= 1.5),
+ libghc-x509-validation-prof,
+Build-Depends-Indep: ghc-doc,
+ libghc-basement-doc,
+ libghc-data-default-class-doc,
+ libghc-network-doc,
+ libghc-socks-doc,
+ libghc-tls-doc,
+ libghc-x509-doc,
+ libghc-x509-store-doc,
+ libghc-x509-system-doc,
+ libghc-x509-validation-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/vincenthz/hs-connection
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-connection
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-connection]
+X-Description: simple and easy network connections API
+ Simple network library for all your connection needs.  This library
+ provides a very simple API to create sockets to a destination with
+ the choice of SSL/TLS, and SOCKS.
+
+Package: libghc-connection-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-connection-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-connection-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
